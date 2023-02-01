@@ -1,0 +1,27 @@
+{
+    "name": "xiaoyinka/boot",
+    "description": "xiaoyinka demo",
+    "type": "library",
+    "authors": [
+        {
+            "name": "xiaoyinka",
+            "email": "xiaoyinka@xiaoyinka.com.cn"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "illuminate/contracts": "5.5.*",
+        "illuminate/support": "5.5.*",
+        "monolog/monolog": "~1.24"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xiaoyinka\\Boot\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('./vendor/xiaoyinka/boot/config/xiaoyinka_log.php', './config/xiaoyinka_log.php');\""
+        ]
+    }
+}
